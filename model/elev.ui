@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Elevator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="EleWell1">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>50</y>
+      <width>97</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton1Up">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton1Down">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Down</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="EleWell2">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>100</width>
+      <height>650</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="Line" name="line_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_8">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_9">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_10">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_11">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_12">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton2Up">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton2Down">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Down</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="EleWell3">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>50</y>
+      <width>100</width>
+      <height>650</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="Line" name="line_13">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_14">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_15">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_16">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_17">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_18">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton3Up">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton3Down">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Down</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="EleWell4">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>50</y>
+      <width>100</width>
+      <height>650</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="Line" name="line_19">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_20">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_21">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_22">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_23">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_24">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton4Up">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EleButton4Down">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Down</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
