@@ -1,6 +1,5 @@
 import time
 from PyQt4 import QtGui, QtCore
-from PyQt4.QtCore import pyqtSignal
 '''
 It is the second version:
 changelog:
@@ -8,11 +7,10 @@ changelog:
 '''
 
 
-class ElevatorCar(QtGui.QLabel, QtCore.QObject):
+class ElevatorCar(QtGui.QLabel):
     """
     elevatorcar inherited from the Qlabel and add a method to move up and down
     """
-    move_signal = QtCore.pyqtSignal(bool)
 
     def __init__(self, order, parent=None, direction=None):
         super(ElevatorCar, self).__init__(parent)
@@ -25,20 +23,21 @@ class ElevatorCar(QtGui.QLabel, QtCore.QObject):
         self.setFrameShape(QtGui.QFrame.Box)
         self.setFrameShadow(QtGui.QFrame.Sunken)
         self.setText("EleBox %s" % str(self.order))
-        self.setAlignment(QtCore.Qt.AlignCenter)
+        # self.setAlignment()
 
     def moveUp(self):
-        self.direction = 'up'
-        self.thread.exit()
+        self.thread.setDirection("up")
+        # quit before start
+        self.thread.terminate()
         self.thread.start()
 
     def moveDown(self):
-        self.direction = 'down'
-        self.thread.exit()
+        self.thread.setDirection("down")
+        self.thread.terminate()
         self.thread.start()
 
-    def stop(self):
-        self.thread.quit()
+    # def stop(self, cur_thread):
+    #     cur_thread.quit()
 
 
 class EleMove(QtCore.QThread):
@@ -47,7 +46,7 @@ class EleMove(QtCore.QThread):
     changelog:
         add the method to change the direction
     """
-    obj_signal = pyqtSignal(ElevatorCar)
+    handle_id_signal = QtCore.pyqtSignal(QtCore.QThread)
 
     def __init__(self, ele, direction):
         super(EleMove, self).__init__()
@@ -58,6 +57,23 @@ class EleMove(QtCore.QThread):
         self.direction = direction
 
     def run(self):
-        for i in range(800):
-            self.obj_signal.emit(self.ele)
-            time.sleep(0.05)
+        # the x, y position of the elebox
+        x = self.ele.geometry().x()
+        y = self.ele.geometry().y()
+        # set the top and buttom bound
+        top_margin = 50
+        buttom_margin = 450
+        if self.direction == "up":
+            step = -2
+        elif self.direction == "down":
+            step = 2
+        for i in range(100):
+            # limit the movement between the bound
+            while (y < buttom_margin) & (y > top_margin):
+                self.ele.move(x, y)
+                # self.ele.setText("%s %d" % (self.direction, disp))
+                y += step
+                # use processEvent to redraw the gui
+                QtGui.QApplication.processEvents()
+                self.handle_id_signal.emit(self.currentThread())
+                time.sleep(0.05)
