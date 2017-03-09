@@ -13,10 +13,12 @@ class ElevatorCar(QtGui.QLabel):
     """
     # move_signal = QtCore.pyqtSignal(bool)
 
-    def __init__(self, order, parent=None, direction=None):
+    def __init__(self, order, location, parent=None, direction=None):
         super(ElevatorCar, self).__init__(parent)
         self.order = order
         self.direction = direction
+        self.location = location  # the location would be sorted as 4
+        self.height = self.geometry().height()  # set the hight here to male it convenient to get in the moving function in redefineUI.py
         self.thread = EleMove(self, self.direction)
         self.setFrameShape(QtGui.QFrame.Box)
         self.setFrameShadow(QtGui.QFrame.Sunken)
@@ -52,6 +54,6 @@ class EleMove(QtCore.QThread):
         self.direction = direction
 
     def run(self):
-        for i in range(800):
+        for i in range(500):
             self.obj_signal.emit(self.ele)
             time.sleep(0.05)
